@@ -14,7 +14,7 @@ void diet(int w0, int i0, int i, int a, int d, int t, int& w1, int& w2, int& m2)
         w1 += (i - (m1 + a));
         w2 += (i - (m2 + a));
 
-        int diff = i - (m2 + a);
+        float  diff = i - (m2 + a);
         if (abs(diff) > t) {
             m2 += diff / 2;
         }
