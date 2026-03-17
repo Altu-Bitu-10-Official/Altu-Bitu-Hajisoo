@@ -8,13 +8,11 @@ int sumNum(string serial) {
 	int sum = 0;
 	for (int i = 0; i < serial.size(); i++) {
 		if (isdigit(serial[i])) {
-			sum += serial[i] - '0';
 			sum += serial[i]-'0';
 		}
 	}
 	return sum;
 }
-bool cmp(string& a, string& b) {
 bool compare(string a, string b) {
 	if (a.size() != b.size()) {
 		return a.size() < b.size();
@@ -26,12 +24,10 @@ bool compare(string a, string b) {
 int main() {
 	int n;
 	cin >> n;
-	vector<string> guitar(n, "");
 	vector<string> guitar(n);
 	for (int i = 0; i < n; i++) {
 		cin >> guitar[i];
 	}
-	sort(guitar.begin(), guitar.end(), cmp);
 	sort(guitar.begin(), guitar.end(), compare);
 	for (int i = 0; i < n; i++) {
 		cout << guitar[i] << '\n';
